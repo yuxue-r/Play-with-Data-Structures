@@ -2,10 +2,43 @@
 //yyz
 
 #include <iostream>
+#include "Array.h"
 using namespace std;
 
-int main() {
-    int arr[10];
+int main()
+{
+
+    Array arr1 = Array(30);
+    /*int a = arr1.getSize();
+    int b = arr1.getCapacity();
+    cout<< a << " "<< b <<endl;*/
+
+    for (int i = 0; i < 10; ++i)
+    {
+        arr1.addLast(i);
+    }
+    arr1.print();
+
+    arr1.addFirst(-1);
+    arr1.addLast(100);
+    arr1.add(3,0);
+/*    a = arr1.getSize();
+    b = arr1.getCapacity();
+    cout<< a << " "<< b <<endl;*/
+
+    arr1.print();
+    cout<< "arr1[12]= " <<arr1.get(12)<<endl;
+    arr1.set(0,999);
+    arr1.print();
+
+    arr1.removeLast();
+    arr1.print();
+    arr1.remove(5);
+    arr1.print();
+    arr1.removeFirst();
+    arr1.print();
+
+/*    int arr[10];
     for (int i = 0; i < 10; ++i) {
         arr[i]=i;
     }
@@ -27,11 +60,13 @@ int main() {
     }
     cout << endl;
 
+
     scores[0] = 98;
     for (int l = 0; l < sizeof(scores) / sizeof(scores[0]); ++l) {
         cout << scores[l] << " ";
     }
     cout << endl;
+*/
 
 
     return 0;
