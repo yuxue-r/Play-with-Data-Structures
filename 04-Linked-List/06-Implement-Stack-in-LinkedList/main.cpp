@@ -36,9 +36,9 @@ void demo3()
 {
     int opCount=1000000;
     ArrayStack<int> arrayStack =  ArrayStack<int>();
-    std::cout << "ArrayStack time: " << testQueue(arrayStack, opCount) << " s" << std::endl;
+    std::cout << "ArrayStack time: " << testStack(arrayStack, opCount) << " s" << std::endl;
     LinkedListStack<int> linkedListStack = LinkedListStack<int>();
-    std::cout << "LinkedListStack time: " << testQueue(linkedListStack, opCount) << " s" << std::endl;
+    std::cout << "LinkedListStack time: " << testStack(linkedListStack, opCount) << " s" << std::endl;
 }
 
 
