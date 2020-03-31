@@ -10,13 +10,14 @@ void demo2();
 void demo3();
 int main()
 {
+    demo2();
     demo3();
 
     return 0;
 }
 
 template<typename T>
-double testQueue(T stack, int opCount)
+double testStack(T stack, int opCount)
 {
     clock_t startTime = clock();
     srand(1000);
