@@ -304,13 +304,20 @@ private:
             // 待删除节点左右子树均不为空的情况
             // 找到比待删除节点大的最小节点, 即待删除节点右子树的最小节点
             // 用这个节点顶替待删除节点的位置
-            Node* successor = minimum(node->right);
-            successor->right = removeMinimum(node->right);
-            successor->left = node->left;
+//            Node* successor = minimum(node->right);
+//            successor->right = removeMinimum(node->right);
+//            successor->left = node->left;
+//            node->left = node->right = nullptr;
+//            node = nullptr;
+//            delete node;
+//            return successor;
+            Node* predecessor = maximum(node->left);
+            predecessor->left = removeMaximum(node->left);
+            predecessor->right = node->right;
             node->left = node->right = nullptr;
             node = nullptr;
             delete node;
-            return successor;
+            return predecessor;
         }
     }
 };
