@@ -6,6 +6,7 @@
 #define INC_06_BINARY_SEARCH_TREE_BST_H
 
 #include "stack"
+#include "queue"
 
 template <typename T>
 class BST
@@ -81,6 +82,7 @@ public:
     {
         generateBSTString(root, 0);
     }
+    // 二分搜索树的非递归前序遍历
     void preOrderNR()
     {
         std::stack<Node *> stack;
@@ -97,6 +99,27 @@ public:
             if (cur->left != nullptr)
             {
                 stack.push(cur->left);
+            }
+        }
+        std::cout << std::endl;
+    }
+    // 二分搜索树的层序遍历
+    void levelOrder()
+    {
+        std::queue<Node *> queue;
+        queue.push(root);
+        while (!queue.empty())
+        {
+            Node* cur = queue.front();
+            std::cout << cur->data << " ";
+            queue.pop();
+            if(cur->left != nullptr)
+            {
+                queue.push(cur->left);
+            }
+            if(cur->right != nullptr)
+            {
+                queue.push(cur->right);
             }
         }
         std::cout << std::endl;

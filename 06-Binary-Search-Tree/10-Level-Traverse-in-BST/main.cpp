@@ -25,6 +25,8 @@ void demo2()
     std::cout<<std::endl;
     bst.preOrderNR();
     std::cout<<std::endl;
+    bst.levelOrder();
+
 //    bst.inOrder();
 //    std::cout<<std::endl;
 //    bst.postOrder();
